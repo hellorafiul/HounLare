@@ -1,0 +1,21 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #958576;
+  font-size: 16px;
+}
+.mainmenu ul li{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 30px 10px;
+}
+.link-hover:hover{
+  color: #223645 !important;
+}
+
+.mainmenu img{
+  border-radius: 50%;
+  width: 50px;
+  margin-top: -6px;
+  margin-right: 5px;
+}
