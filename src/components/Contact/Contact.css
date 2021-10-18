@@ -1,0 +1,19 @@
+#contact{
+  background: linear-gradient(0deg, rgb(116 53 53 / 85%), rgb(0 0 0 / 50%)), url('../../images/contact.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: left;
+  background-size: cover;
+  min-height: 800px;
+}
+.contact{
+  background-color: #223645;
+}
+.contact h3{
+  color: #fff;
+  font-weight: 600;
+}
+.contact p{
+  color: rgba(255, 255, 255, 0.808);
+
+}

@@ -10,7 +10,7 @@ const Hero = () => {
             Health Care Center</h1>
           <p> Pleasure, but because those who do not know how to pursue<br />
             pleasure rationally extremely painful.</p>
-          <button><span>Learn More</span> <i class="fas fa-angle-double-right"></i></button>
+          <button className='hl-btn-primary'><span>Learn More</span> <i class="fas fa-angle-double-right btn-i"></i></button>
         </div>
       </section>
     </div>

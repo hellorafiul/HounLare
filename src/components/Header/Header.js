@@ -14,20 +14,23 @@ const Header = () => {
           </button>
           <div className="mainmenu collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" aria-current="page" to="/home">Home</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" to="/about">About Us</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" to="/service">Service</Link>
               </li>
-              <li className="nav-item d-flex">
+              <li className="nav-item py-md-3 px-md-2">
+                <Link className="nav-link text-danger link-hover" to="/contact">Contact</Link>
+              </li>
+              <li className="nav-item d-flex py-md-3 px-md-2">
                 <img src={fav} alt="" />
                 <Link className="nav-link text-danger link-hover" to="/logout">LogOut</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" to="/signup">signUp</Link>
               </li>
             </ul>

@@ -5,11 +5,11 @@ const Service = (props) => {
   const { name, img, des, id } = props.service;
   return (
     <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
+      <div class="card h-100 text-center service">
         <img src={img} class="card-img-top w-25 mx-auto" alt="..." />
         <div class="card-body mb-2">
           <h5 class="card-title">{name}</h5>
-          <p class="card-text">{des.substring(0, 190)}...</p>
+          <p class="card-text">{des.substring(0, 160)} <span>. . .</span></p>
           <Link to={`service/${id}`}>View Details</Link>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <section id='services'>
       <div class="container">
-        <div class="mb-50 text-center">
+        <div class="services text-center">
           <h4>Trusted service</h4>
           <h2>We’re lanched most powerful <br /> treatment system.
             They are <span>making beautifully</span>.</h2>
