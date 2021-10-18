@@ -8,6 +8,7 @@ import {
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Appointment from './components/Appointment/Appointment';
+import Services from './components/Services/Services';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='/'>
             <Hero></Hero>
             <Appointment></Appointment>
+            <Services></Services>
           </Route>
         </Switch>
       </Router>
