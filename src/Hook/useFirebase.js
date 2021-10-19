@@ -20,12 +20,14 @@ const useFirebase = () => {
   const [error, setError] = useState('');
 
   const handleGoogleLogin = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-        setError('');
-        console.log(result.user)
-      }).catch((error) => {
+
+    return signInWithPopup(auth, provider)
+      // .then((result) => {
+      //   setUser(result.user);
+      //   setError('');
+      //   console.log(result.user)
+      // })
+      .catch((error) => {
         setError(error.message);
       });
 

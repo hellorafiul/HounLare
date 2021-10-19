@@ -19,6 +19,7 @@ import AuthProvider from "./components/AuthProvider/AuthProvider";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking/Booking';
 import Doctors from './components/Doctors/Doctors';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -56,7 +57,7 @@ function App() {
               <Register></Register>
             </Route>
             <Route exact path='/login'>
-              <Register></Register>
+              <Login></Login>
             </Route>
             <PrivateRoute exact path="/service/:serviceId">
               <Booking></Booking>
