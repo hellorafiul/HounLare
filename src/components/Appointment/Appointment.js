@@ -70,15 +70,15 @@ const Appointment = () => {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <div className="appointment4__content">
+            <div className="appointment4__content pb-5">
               <h3>We assured to you that we will provide responsible treatment
-                to you. It’s our duty for any <span className='hero-special'>patients</span>. More information below.</h3>
-              <ul>
+                to you. It’s our duty for any <span className='hero-special'>patients</span>.</h3>
+              {/* <ul>
                 <li><Link to="#">About us <span>.</span></Link></li>
                 <li><Link to="#">All Services <span>.</span></Link></li>
                 <li><Link to="#">Quick Appointment <span>.</span></Link></li>
                 <li><Link to="#">Home Care</Link></li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

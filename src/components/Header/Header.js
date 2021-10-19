@@ -26,6 +26,9 @@ const Header = () => {
                 <Link className="nav-link text-danger link-hover" to="/service">Service</Link>
               </li>
               <li className="nav-item py-md-3 px-md-2">
+                <Link className="nav-link text-danger link-hover" to="/team">Team</Link>
+              </li>
+              <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" to="/contact">Contact</Link>
               </li>
               {user.email ? <li className="nav-item d-flex py-md-3 px-md-2">

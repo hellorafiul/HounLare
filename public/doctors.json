@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "category": "Implantologist",
+    "img": "https://i.ibb.co/TKVS6d0/5-1.png",
+    "name": "Dr. Sarah Johnson",
+    "des": "Dr. Sarah Johnson is a renowned dental surgeon and a certified Dental Implantologist. He is the Director our hospitals.",
+    "qua": "BDS , MDS - Plastic And Cosmetic Surgeon",
+    "phn": "(+760) 987-65-23654",
+    "email": "sarah @honulare.com"
+  },
+  {
+    "id": 2,
+    "category": "Prosthodontist",
+    "img": "https://i.ibb.co/SQYRsjc/4-2.png",
+    "name": "Dr. Greg House",
+    "des": "Dr. Greg House is a renowned dental surgeon and a certified Prosthodontist. He is the Managing Director our hospitals.",
+    "qua": "BDS , MDS - Plastic And Cosmetic Surgeon",
+    "phn": "(+760) 987-65-35984",
+    "email": "greg @honulare.com"
+  },
+  {
+    "id": 3,
+    "category": "Prosthodontist",
+    "img": "https://i.ibb.co/rdyzsmg/3-2.png",
+    "name": "Dr. Robert B. Moreau",
+    "des": "Dr. Sarah Johnson is a renowned dental surgeon and a certified Prosthodontist. He is the Co-Founder our hospitals.",
+    "qua": "BDS , MDS - Plastic And Cosmetic Surgeon",
+    "phn": "(+760) 987-65-10284",
+    "email": "robert @honulare.com"
+  },
+  {
+    "id": 4,
+    "category": "Implantologist",
+    "img": "https://i.ibb.co/RyBGMgJ/2-2.png",
+    "name": "Evelynne Mirando",
+    "des": "Evelynne Mirando is a renowned dental surgeon and a certified Dental Implantologist. He is the Founder of our hospitals.",
+    "qua": "BDS , MDS - Dental Specialist",
+    "phn": "(+760) 987-65-38410",
+    "email": "evelynne @honulare.com"
+  },
+  {
+    "id": 5,
+    "category": "Ophthalmologists",
+    "img": "https://i.ibb.co/B24chdf/1-2.png",
+    "name": "Dr. Daryl Cornelius",
+    "des": "Dr. Daryl Cornelius is a renowned dental surgeon and a certified Dental Implantologist. He is the Director our hospitals.",
+    "qua": "BDS , MDS - Plastic And Cosmetic Surgeon",
+    "phn": "(+760) 987-65-49402",
+    "email": "daryl@honulare.com"
+  }
+]

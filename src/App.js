@@ -18,6 +18,7 @@ import Contact from './components/Contact/Contact';
 import AuthProvider from "./components/AuthProvider/AuthProvider";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking/Booking';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
             <Route exact path='/about'>
               <About></About>
             </Route>
+            <PrivateRoute exact path='/team'>
+              <Doctors></Doctors>
+              <Appointment></Appointment>
+            </PrivateRoute>
             <PrivateRoute exact path='/service'>
               <Services></Services>
             </PrivateRoute>
