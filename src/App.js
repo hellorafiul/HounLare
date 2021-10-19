@@ -43,6 +43,9 @@ function App() {
           <Route exact path='/contact'>
             <Contact></Contact>
           </Route>
+          <Route exact path='/register'>
+            <Register></Register>
+          </Route>
           <Route path='*'>
             <ErrorPage></ErrorPage>
           </Route>

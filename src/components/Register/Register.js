@@ -2,37 +2,41 @@ import React from 'react';
 import './Register.css'
 import register from '../../images/register.svg'
 import { Link } from 'react-router-dom';
-const Appointment2 = () => {
+import useFirebase from '../../Hook/useFirebase';
+const Register = () => {
+  const { handleGoogleLogin, user } = useFirebase();
+  console.log(user)
+
   return (
-    <section class="register">
-      <div class="container">
+    <section className="register">
+      <div className="container">
         <h2 className="text-center pt-5 mt-md-5">Create an Account to Get appointment</h2>
-        <div class="row d-flex align-items-center">
-          <div class="col-md-6">
-            <div class="title1 mb-50">
-              <h3 class="pb-2">Register Now!</h3>
+        <div className="row d-flex align-items-center">
+          <div className="col-md-6">
+            <div className="title1 mb-50">
+              <h3 className="pb-2">Register Now!</h3>
             </div>
-            <div class="contact_page3__form">
+            <div className="contact_page3__form">
               <form id="contact-form" action="" >
-                <div class="row">
-                  <div class="col-md-8 pb-3">
-                    <input class="form-control" type="email" name="email" placeholder="Email Address*" required="" />
+                <div className="row">
+                  <div className="col-md-8 pb-3">
+                    <input className="form-control" type="email" name="email" placeholder="Email Address*" required="" />
                   </div>
-                  <div class="col-md-8 pb-3">
-                    <input class="form-control" type="password" name="password" placeholder="Your Password*" />
+                  <div className="col-md-8 pb-3">
+                    <input className="form-control" type="password" name="password" placeholder="Your Password*" />
                   </div>
-                  <div class="col-lg-12 broder">
-                    <button type="submit" class="btn-register me-3">Register <i class="fas fa-angle-double-right"></i></button>
-                    <button type="submit" class="btn-register">Login <i class="fas fa-angle-double-right"></i></button>
+                  <div className="col-lg-12 broder">
+                    <button type="submit" className="btn-register me-3">Register <i className="fas fa-angle-double-right"></i></button>
+                    <button type="submit" className="btn-register">Login <i className="fas fa-angle-double-right"></i></button>
                   </div>
                 </div>
-                <p class="form-message"></p>
+                <p className="form-message"></p>
               </form>
             </div>
             <div>
               <p>Or SignIn with...</p>
               <div>
-                <Link to=""><i class="fab fa-google">oogle</i></Link>
+                <Link onClick={handleGoogleLogin} to=""><i className="fab fa-google">oogle</i></Link>
               </div>
             </div>
           </div>
@@ -47,4 +51,4 @@ const Appointment2 = () => {
   );
 };
 
-export default Appointment2;
+export default Register;

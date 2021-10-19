@@ -1,9 +1,11 @@
 import React from 'react';
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import logo from '../../images/logo.png'
 import fav from '../../images/fav.jpg'
+import useFirebase from '../../Hook/useFirebase';
 const Header = () => {
+  const { user, handleLogout } = useFirebase();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light font-primary bg-light">
@@ -26,13 +28,14 @@ const Header = () => {
               <li className="nav-item py-md-3 px-md-2">
                 <Link className="nav-link text-danger link-hover" to="/contact">Contact</Link>
               </li>
-              <li className="nav-item d-flex py-md-3 px-md-2">
-                <img src={fav} alt="" />
-                <Link className="nav-link text-danger link-hover" to="/logout">LogOut</Link>
-              </li>
-              <li className="nav-item py-md-3 px-md-2">
-                <Link className="nav-link text-danger link-hover" to="/signup">signUp</Link>
-              </li>
+              {user.email ? <li className="nav-item d-flex py-md-3 px-md-2">
+                <img src={user.photoURL} alt="" />
+                <Link className="nav-link text-danger link-hover" to="">{user.displayName},</Link>
+                <Link onClick={handleLogout} className="nav-link text-danger link-hover" to="/register">LogOut</Link>
+              </li> :
+                <li className="nav-item py-md-3 px-md-2">
+                  <Link className="nav-link text-danger link-hover" to="/register">signUp</Link>
+                </li>}
             </ul>
           </div>
         </div>
