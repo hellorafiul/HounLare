@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css'
 import register from '../../images/register.svg'
 import { Link } from 'react-router-dom';
 import useFirebase from '../../Hook/useFirebase';
 const Register = () => {
-  const { handleGoogleLogin, user } = useFirebase();
-  console.log(user)
+  const { handleGoogleLogin, user, handleUserRegister, handleUserLogin } = useFirebase();
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value)
+  }
+
+  const handleRegister = () => {
+    handleUserRegister(email, password)
+  }
+  const handleLogin = () => {
+    handleUserLogin(email, password)
+  }
+
+  // console.log(email, password)
   return (
     <section className="register">
       <div className="container">
@@ -17,21 +35,21 @@ const Register = () => {
               <h3 className="pb-2">Register Now!</h3>
             </div>
             <div className="contact_page3__form">
-              <form id="contact-form" action="" >
+              <div id="contact-form" action="" >
                 <div className="row">
                   <div className="col-md-8 pb-3">
-                    <input className="form-control" type="email" name="email" placeholder="Email Address*" required="" />
+                    <input onChange={handleEmail} className="form-control" type="email" name="email" placeholder="Email Address*" required />
                   </div>
                   <div className="col-md-8 pb-3">
-                    <input className="form-control" type="password" name="password" placeholder="Your Password*" />
+                    <input onChange={handlePassword} className="form-control" type="password" name="password" placeholder="Your Password*" />
                   </div>
                   <div className="col-lg-12 broder">
-                    <button type="submit" className="btn-register me-3">Register <i className="fas fa-angle-double-right"></i></button>
-                    <button type="submit" className="btn-register">Login <i className="fas fa-angle-double-right"></i></button>
+                    <button onClick={handleRegister} className="btn-register me-3">Register <i className="fas fa-angle-double-right"></i></button>
+                    <button onClick={handleLogin} className="btn-register">Login <i className="fas fa-angle-double-right"></i></button>
                   </div>
                 </div>
                 <p className="form-message"></p>
-              </form>
+              </div>
             </div>
             <div>
               <p>Or SignIn with...</p>

@@ -1,5 +1,13 @@
 import FirebaseInit from './../Firebase/Firebase.init';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
+} from "firebase/auth";
 import { useEffect, useState } from 'react';
 
 FirebaseInit();
@@ -44,7 +52,28 @@ const useFirebase = () => {
     });
   }
 
-  return { handleGoogleLogin, user, handleLogout };
+  const handleUserRegister = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user)
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+      });
+  }
+
+  const handleUserLogin = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+      });
+  }
+
+  return { handleGoogleLogin, user, handleLogout, handleUserRegister, handleUserLogin };
 
 };
 export default useFirebase;

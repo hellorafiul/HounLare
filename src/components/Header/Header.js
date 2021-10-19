@@ -3,9 +3,9 @@ import './Header.css'
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../images/logo.png'
 import fav from '../../images/fav.jpg'
-import useFirebase from '../../Hook/useFirebase';
+import useAuth from '../../Hook/useAuth';
 const Header = () => {
-  const { user, handleLogout } = useFirebase();
+  const { user, handleLogout } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light font-primary bg-light">
@@ -30,8 +30,8 @@ const Header = () => {
               </li>
               {user.email ? <li className="nav-item d-flex py-md-3 px-md-2">
                 <img src={user.photoURL} alt="" />
-                <Link className="nav-link text-danger link-hover" to="">{user.displayName},</Link>
-                <Link onClick={handleLogout} className="nav-link text-danger link-hover" to="/register">LogOut</Link>
+                <Link className="nav-link text-danger link-hover" to="">{user?.displayName},</Link>
+                <Link onClick={handleLogout} className="nav-link text-danger link-hover" to="/login">LogOut</Link>
               </li> :
                 <li className="nav-item py-md-3 px-md-2">
                   <Link className="nav-link text-danger link-hover" to="/register">signUp</Link>

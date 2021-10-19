@@ -15,44 +15,50 @@ import ErrorPage from './components/404Error/ErrorPage';
 import About from './components/About/About';
 import Service from './components/Service/Service';
 import Contact from './components/Contact/Contact';
+import AuthProvider from "./components/AuthProvider/AuthProvider";
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path='/'>
-            <Hero></Hero>
-            <Appointment></Appointment>
-            <Services></Services>
-            <Register></Register>
-          </Route>
-          <Route exact path='/home'>
-            <Hero></Hero>
-            <Appointment></Appointment>
-            <Services></Services>
-            <Register></Register>
-          </Route>
-          <Route exact path='/about'>
-            <About></About>
-          </Route>
-          <Route exact path='/service'>
-            <Services></Services>
-          </Route>
-          <Route exact path='/contact'>
-            <Contact></Contact>
-          </Route>
-          <Route exact path='/register'>
-            <Register></Register>
-          </Route>
-          <Route path='*'>
-            <ErrorPage></ErrorPage>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
-
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path='/'>
+              <Hero></Hero>
+              <Appointment></Appointment>
+              <Services></Services>
+              <Register></Register>
+            </Route>
+            <Route exact path='/home'>
+              <Hero></Hero>
+              <Appointment></Appointment>
+              <Services></Services>
+              <Register></Register>
+            </Route>
+            <Route exact path='/about'>
+              <About></About>
+            </Route>
+            <PrivateRoute exact path='/service'>
+              <Services></Services>
+            </PrivateRoute>
+            <Route exact path='/contact'>
+              <Contact></Contact>
+            </Route>
+            <Route exact path='/register'>
+              <Register></Register>
+            </Route>
+            <Route exact path='/login'>
+              <Register></Register>
+            </Route>
+            <Route path='*'>
+              <ErrorPage></ErrorPage>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
