@@ -17,6 +17,7 @@ import Service from './components/Service/Service';
 import Contact from './components/Contact/Contact';
 import AuthProvider from "./components/AuthProvider/AuthProvider";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking/Booking';
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
             <Route exact path='/login'>
               <Register></Register>
             </Route>
+            <PrivateRoute exact path="/service/:serviceId">
+              <Booking></Booking>
+            </PrivateRoute>
             <Route path='*'>
               <ErrorPage></ErrorPage>
             </Route>

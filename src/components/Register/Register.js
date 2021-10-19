@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <section className="register">
       <div className="container">
-        <h2 className="text-center pt-5 mt-md-5">Create an Account to Get appointment</h2>
+        <h2 className="text-center mt-md-5">Create an Account to Get appointment</h2>
         <div className="row d-flex align-items-center">
           <div className="col-md-6">
             <div className="title1 mb-50">

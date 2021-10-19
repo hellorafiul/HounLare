@@ -9,7 +9,7 @@ const About = () => {
     <>
       <div id="about" className=' text-center'>
         <h1 className='text-light d-block'>Check out with quick view!</h1>
-        <p className='pt-2 text-light lead'>Why HounLare services is best all time since 1990. </p>
+        <p className='pt-2 text-light lead pb-3'>Why HounLare services is best all time since 1990. </p>
       </div>
       <div className='container my-5'>
         <div className="row align-items-center">

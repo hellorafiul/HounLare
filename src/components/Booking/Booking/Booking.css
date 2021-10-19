@@ -1,0 +1,19 @@
+#booking{
+  background: linear-gradient(
+    0deg, rgb(0 0 0 / 58%), rgb(0 0 0 / 63%)), url('../../../images/booking.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 300px;
+  background-size: cover;
+}
+
+.booking a{
+  font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #E12454;
+}
+.booking a:hover{
+  color: #223645
+}

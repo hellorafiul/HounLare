@@ -3,9 +3,8 @@ import './Services.css'
 import Service from './../Service/Service';
 const Services = () => {
   const [services, setServices] = useState([])
-
   useEffect(() => {
-    fetch('./Data.JSON')
+    fetch('./data.json')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
