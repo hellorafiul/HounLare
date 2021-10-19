@@ -45,7 +45,7 @@ const Register = () => {
                   </div>
                   <div className="col-lg-12 broder">
                     <button onClick={handleRegister} className="btn-register me-3">Register <i className="fas fa-angle-double-right"></i></button>
-                    <Link to="/login"><p onClick={handleLogin} className="mt-2">Already have an Account? Login Now!</p></Link>
+                    <Link to="/login"><p className="mt-2">Already have an Account? Login Now!</p></Link>
                   </div>
                 </div>
                 <p className="form-message"></p>

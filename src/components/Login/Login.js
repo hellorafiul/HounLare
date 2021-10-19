@@ -55,7 +55,7 @@ const Login = () => {
                   </div>
                   <div className="col-lg-12 broder">
                     <button onClick={handleLogin} className="btn-register">Login <i className="fas fa-angle-double-right"></i></button>
-                    <Link to="/register"><p onClick={handleRegister} className="me-3 mt-2">Don't have an account? Register Now!</p></Link>
+                    <Link to="/register"><p className="me-3 mt-2">Don't have an account? Register Now!</p></Link>
                   </div>
                 </div>
                 <p className="form-message"></p>
